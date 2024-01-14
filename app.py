@@ -2,8 +2,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
+#from sklearn.ensemble import RandomForestClassifier
+#from sklearn.metrics import accuracy_score
 
 # Load the RandomForest model with the specified protocol
 model = pickle.load(open('model.pkl', 'rb'))
