@@ -4,9 +4,15 @@ import pandas as pd
 import pickle
 #from sklearn.ensemble import RandomForestClassifier
 #from sklearn.metrics import accuracy_score
+import os
+# Get the absolute path to the directory containing the app script
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
+# Load the model using the relative path
+model_path = os.path.join(script_dir, 'model.pkl')
+model = pickle.load(open(model_path, 'rb'))
 # Load the RandomForest model with the specified protocol
-model = pickle.load(open('model.pkl', 'rb'))
+#model = pickle.load(open('model.pkl', 'rb'))
 
 
 # Function to make predictions
